@@ -19,6 +19,7 @@
 .input-message {
     border-top: 2px solid grey;
     height: 12%;
+    background-color:lightskyblue;
 }
 
 .input-text-message {
@@ -32,3 +33,7 @@
     left: 7px;
     top: -22px;
 }
+
+/* i.fa-paper-plane {
+    background-color: darkcyan;
+} */

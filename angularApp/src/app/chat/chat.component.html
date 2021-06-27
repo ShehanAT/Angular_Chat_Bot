@@ -5,7 +5,7 @@
     [ngClass]="{'left-message': !message.userOwner, 'right-message': message.userOwner}"></app-message>
   </div>
 </div>
-<div class="input-message">
-  <textarea class="input-text-message" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
+<div class="input-message form-group">
+  <textarea class="input-text-message form-input" [(ngModel)]="textInput" placeholder="Type text here" (keyup)="onKey($event)"></textarea>
   <i class="fa fa-paper-plane fa-2x input-send" aria-hidden="true" (click)="sendMessage()"></i>
 </div>
