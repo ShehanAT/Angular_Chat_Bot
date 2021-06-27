@@ -9,7 +9,13 @@ export const environment = {
     baseUrl: "https://dialogflow.googleapis.com/v2/projects/angular-chat-bot-ohub/",
     sessionParam: "agent/sessions/",
     sessionValue: "123456789/",
-    contextParam: "context/set-language-followup"
+    contextParam: "context/set-language-followup",
+    projectId: "angular-chat-bot-ohub"
+  },
+  backend: {
+    baseUrl: "http://localhost:3000/",
+    apiUrl: "http://localhost:3000/api/",
+    requestTextUrl: "http://localhost:3000/api/requestText/"
   }
 };
 

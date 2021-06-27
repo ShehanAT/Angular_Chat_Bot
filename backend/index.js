@@ -5,7 +5,9 @@ var http = require('http'),
     bodyParser = require('body-parser'),
     session = require('express-session'),
     cors = require('cors'),
-    errorhandler = require('errorhandler');
+    errorhandler = require('errorhandler'),
+    dialogflow = require("./routes/api/dialogflow"),
+    index = require('./routes/index');
 
 var isProduction = process.env.NODE_ENV === 'production';
 
@@ -29,7 +31,8 @@ if (!isProduction) {
 }
 
 
-app.use(require('./routes/index'));
+app.use("/", index);
+app.use("/api", dialogflow);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

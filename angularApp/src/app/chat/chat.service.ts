@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { TextMessage } from '../model/text-messsage.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,12 @@ export class ChatService {
       'Access-Control-Allow-Origin':'*',
     })
   };
-  talk(){
-    return this.http.post(environment.dialogflow.baseUrl + environment.dialogflow.sessionParam + environment.dialogflow.sessionValue + environment.dialogflow.contextParam, this.request, this.httpOptions)
+  sendMessage(textMessage: TextMessage){
+    var reqBody = {
+      "projectId": environment.dialogflow.projectId,
+      "requestText": textMessage.text
+    }
+    console.log(environment.backend.requestTextUrl);
+    return this.http.post(environment.backend.requestTextUrl, reqBody, this.httpOptions)
   }
 }

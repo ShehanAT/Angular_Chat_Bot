@@ -1,0 +1,13 @@
+.content-message {
+    width: 80%;
+}
+  
+.right-content {
+    text-align: right;
+}
+
+p {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+}

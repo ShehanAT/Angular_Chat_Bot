@@ -11,10 +11,10 @@ export class ChatDialogComponent implements OnInit {
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
-    this.chatService.talk()
-    .subscribe((res) => {
-      console.log(res);
-    })
+    // this.chatService.talk()
+    // .subscribe((res) => {
+    //   console.log(res);
+    // })
   }
 
 }
