@@ -1,0 +1,10 @@
+{
+    "/posts": {
+      "target": "https://dialogflow.googleapis.com/v2/projects/angular-chat-bot-ohub",
+      "secure": true,
+      "pathRewrite": {
+      "^/posts": ""
+    },
+      "changeOrigin": true
+    }
+  }
