@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChatModule } from './chat/chat.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ChatComponent } from './chat/chat.component';
 import { ChatService } from './chat/chat.service';
 import { MessageComponent } from './message/message.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,10 +19,10 @@ import { MessageComponent } from './message/message.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChatModule,
     HttpClientModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   providers: [ChatService],
   bootstrap: [AppComponent]

@@ -4,12 +4,8 @@
 
 export const environment = {
   production: false,
+  firstName: 'Shehan',
   dialogflow: {
-    angularChatBot: "AIzaSyChbAO1JfK95n-UCnMDaAhXnZ934lC68KM",
-    baseUrl: "https://dialogflow.googleapis.com/v2/projects/angular-chat-bot-ohub/",
-    sessionParam: "agent/sessions/",
-    sessionValue: "123456789/",
-    contextParam: "context/set-language-followup",
     projectId: "angular-chat-bot-ohub"
   },
   backend: {

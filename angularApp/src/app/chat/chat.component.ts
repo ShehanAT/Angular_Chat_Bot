@@ -3,6 +3,7 @@ import { ChatService } from './chat.service';
 import { Message } from '../model/message.model';
 import { TextMessage } from '../model/text-messsage.model';
 import { ResponseMesssage } from '../model/response-message.model';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -32,7 +33,7 @@ export class ChatComponent implements OnInit {
     let newMessage: Message = {text: this.textInput, date:"", userOwner:true};
 
     this.messages.push(newMessage);
-    let messageBack: TextMessage = {"firstname": "Simon", "text": this.textInput};
+    let messageBack: TextMessage = {"firstname": environment.firstName, "text": this.textInput};
     if (this.BACK_ENABLED) {
         this.chatService.sendMessage(messageBack)
         .subscribe((res: ResponseMesssage) => {
