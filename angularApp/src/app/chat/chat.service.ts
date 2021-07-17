@@ -10,15 +10,16 @@ export class ChatService {
   constructor(private http: HttpClient) { }
 
   httpOptions = {
-    headers: new HttpHeaders({ 
-      'Access-Control-Allow-Origin':'*',
+    headers: new HttpHeaders({
+      "Access-Control-Allow-Origin": "*"
     })
   };
+
   sendMessage(textMessage: TextMessage){
     var reqBody = {
       "projectId": environment.dialogflow.projectId,
       "requestText": textMessage.text
     }
-    return this.http.post(environment.backend.requestTextUrl, reqBody, this.httpOptions)
+    return this.http.post(environment.backend.requestTextUrl, reqBody, this.httpOptions);
   }
 }
