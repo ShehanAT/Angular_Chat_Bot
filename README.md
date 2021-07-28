@@ -2,4 +2,4 @@
 ### Chat Bot built using Angular, Node.js, and Google Dialogflow
 
 ### Screenshot:
-![Angular ChatBot Screenshot](https://imgur.com/cbnrZ2U)
+![Imgur](https://imgur.com/cbnrZ2U)
